@@ -1,6 +1,7 @@
 {
     "name": "flowcode/pachamama",
     "description": "PHP micro framework for mail sending",
+    "license": "MIT",
     "authors": [
         {
             "name": "Juan Manuel Agüero",
