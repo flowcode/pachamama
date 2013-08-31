@@ -1,0 +1,1 @@
+<a><? echo $params["name"] ?></a><a><? echo $params["mail"] ?></a>
