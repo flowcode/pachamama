@@ -52,6 +52,12 @@ class MailMessage implements IMailMessage {
         }
 
         $mail = new MailMessage($to, $from, $body, $subject);
+        $headers = "MIME-Version: 1.0\r\n"
+                . "Content-Type: text/html; charset=utf-8\r\n"
+                . "Content-Transfer-Encoding: 8bit\r\n"
+                . "From: =?UTF-8?B?" . base64_encode($params["from_name"]) . "?= <" . $from . ">\r\n"
+                . "X-Mailer: PHP/" . phpversion();
+        $mail->setHeaders($headers);
         return $mail;
     }
 
